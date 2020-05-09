@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docsify Open Course Starter Kit</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="assets/favicon/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="Simple">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" /> -->
+    <link rel="stylesheet" href="assets/css/theme-custom.css">
+
+    <!-- Alternate Stylesheets -->
+    <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css" title="Defaults">
+    <link rel="stylesheet alternate" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="Simple Dark">
+
+    <!-- Font Awesome Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+
+
+    <!-- changelog stylesheet -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css" />
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /> -->
+
+    <style>
+        :root{
+            --docsify-example-panels-left-panel-width : 55%;
+            --docsify-example-panels-right-panel-width : 45%;
+        }
+        .text-danger{color:red;}
+    </style>
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <nav></nav>
+    <script>
+        // Docsify
+        window.$docsify = {
+            // GENERAL SETTINGS
+            // -----------------------------------------------------------------
+            name       : 'Toolbox Docsify',
+            repo       : 'https://github.com/hibbitts-design/docsify-open-course-starter-kit',
+            homepage   : 'home.md',
+            loadSidebar: 'sidebar.md',
+            loadNavbar : false,         // IMPORTANT for changelog
+            changelog : 'changelog.md',  // path of your changelog, it can be remote as well
+            externalLinkTarget: '_blank',
+
+            // SIDEBAR NAVIGATION
+            // -----------------------------------------------------------------
+            auto2top   : true,
+            maxLevel   : 3,
+            subMaxLevel: 3,
+
+            // PLUGIN SETTINGS
+            // -----------------------------------------------------------------
+            search: {
+                depth      : 3,
+                noData     : 'No matches found.',
+                placeholder: 'Enter search text here...'
+            },
+            // docsify-copy-code (defaults)
+            copyCode: {
+                buttonText : 'Copy to clipboard',
+                errorText  : 'Error',
+                successText: 'Copied'
+            }
+            // // CUSTOM PLUGINS
+            // // -----------------------------------------------------------------
+            // plugins: [
+            //     function (hook, vm) {
+            //     hook.beforeEach(function (html) {
+            //         if (/githubusercontent\.com/.test(vm.route.file)) {
+            //         url = vm.route.file
+            //             .replace('raw.githubusercontent.com', 'github.com')
+            //             .replace(/\/master/, '/blob/master')
+            //         } else {
+            //         url = 'https://github.com/hibbitts-design/docsify-open-publishing-starter-kit/tree/master/docs/' + vm.route.file
+            //         }
+            //         var editHtml = '[:memo: Edit this Page on GitHub](' + url + ')\n'
+
+            //         // Adjust GitHub displayable image URL format to also work in Docsify
+            //         html = html.replace(new RegExp("../assets/images", 'ig'), "assets/images");
+
+            //         return editHtml
+            //         + html
+            //         + '\n\n----\n\n'
+            //         + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal;">Powered by docsify</a>'
+            //     })
+            //     }
+            // ]
+
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+
+    <!-- Customizable Theme-->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+
+    <!-- Search Box Plugin -->
+    <script src="https://unpkg.com/docsify/lib/plugins/search.min.js"></script>
+
+    <!-- Emoji Plugin -->
+    <script src="https://unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+
+    <!-- Font Awesome Plugin -->
+    <script src="https://unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+
+    <!-- Tabs Plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+    <!-- Run External Scripts Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+
+    <!-- Edit on GitHub Plugin -->
+    <script src="https://unpkg.com/docsify-edit-on-github/index.js"></script>
+
+    <!-- Pagination Plugin -->
+    <script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+
+    <!-- docsify-example-panels (latest) -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-example-panels@1"></script>
+
+    <!-- Dark theme -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
+
+    <!-- Mermaid graph plugin -->
+    <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+    <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"> </script>
+    <script>mermaid.initialize({ startOnLoad: true });</script>
+
+    <!-- plantuml plugin -->
+    <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+
+    <!-- Changelog plugin  -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
+
+    <!-- Glossary plugin -->
+    <script src="//unpkg.com/docsify-glossary/dist/docsify-glossary.min.js"></script>
+
+</body>
+</html>
